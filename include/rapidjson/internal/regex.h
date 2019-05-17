@@ -291,6 +291,7 @@ private:
                     if (!CharacterEscape(ds, &codepoint))
                         return; // Unsupported escape character
                     // fall through to default
+                    // fall through
 
                 default: // Pattern character
                     PushOperand(operandStack, codepoint);
@@ -520,6 +521,8 @@ private:
                 else if (!CharacterEscape(ds, &codepoint))
                     return false;
                 // fall through to default
+                // fall through
+
 
             default:
                 switch (step) {
@@ -529,6 +532,7 @@ private:
                         break;
                     }
                     // fall through to step 0 for other characters
+                    // fall through
 
                 case 0:
                     {
